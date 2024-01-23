@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-family: 'Varela Round', sans-serif;
+}
+
+button {
+  font-family: 'Varela Round', sans-serif;
+  text-transform: none !important;
+}
+
+i {
+  font-size: 80px !important;
+}
+
+.arrow-button {
+  font-size: 40px !important;
+}
+
+body {
+  background: #FFF;
+}
+
+@media (min-width: 700px) {
+  .button-title {
+    font-size: 25px !important;
+  }
+
+  .video {
+    height: 750px !important;
+  }
+
+  .pdf {
+    height: 750px !important;
+  }
+
+  .pdf_description {
+    font-size: 30px !important;
+  }
+
+  .video_description {
+    font-size: 30px !important;
+  }
+
+  .whatsapp_share {
+    font-size: 22px !important;
+  }
+
+  .play-video {
+    font-size: 50px !important;
+    font-weight: bold !important;
+  }
+
+  .whatsapp_button {
+    color: #25D366 !important;
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 699px) {
+  .button-title {
+    font-size: 16px !important;
+    line-height: 1rem;
+  }
+
+  .video_description {
+    font-size: 30px !important;
+  }
+
+  .video {
+    height: 500px !important;
+  }
+
+  .pdf {
+    height: 500px !important;
+  }
+
+  .pdf_description {
+    font-size: 20px !important;
+  }
+
+  .play-video {
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
+
+  .whatsapp_share {
+    font-size: 18px !important;
+  }
+
+  .whatsapp_button {
+    color: #25D366 !important;
+    font-size: 20px !important;
+  }
+}
