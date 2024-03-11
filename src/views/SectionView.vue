@@ -26,6 +26,7 @@
           <CallButton :post="post" v-if="post.content_type_id == 6" />
           <ExternalPageButton :post="post" v-if="post.content_type_id == 7" />
           <AppButton :post="post" v-if="post.content_type_id == 8" />
+          <SectionShowButton :post="post" v-if="post.content_type_id == 9" />
 
           <!-- Agregar un elemento de separación después de cada segundo elemento -->
           <div v-if="(index + 1) % 2 === 0" class="w-full"></div>

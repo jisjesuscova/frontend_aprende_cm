@@ -15,6 +15,7 @@
       <TextData :post="post" v-if="post.content_type_id == 3" />
       <PdfData :post="post" v-if="post.content_type_id == 4" />
       <IframeData :post="post" v-if="post.content_type_id == 5" />
+      <ImageData :post="post" v-if="post.content_type_id == 9" />
     </div>
   </div>
 </template>
