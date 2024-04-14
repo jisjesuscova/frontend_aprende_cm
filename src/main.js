@@ -8,7 +8,7 @@ import VueGtag from "vue-gtag";
 
 const app = createApp(App).use(router);
 
-const gtagId = 'G-FQHXBQ1HVS';
+const gtagId = 'G-X9C2GX3926';
 
 app.mount('#app')
 
