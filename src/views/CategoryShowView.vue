@@ -15,6 +15,7 @@
       <TextData :post="post" v-if="post.content_type_id == 3" />
       <PdfData :post="post" v-if="post.content_type_id == 4" />
       <IframeData :post="post" v-if="post.content_type_id == 5" />
+      <ImageData :post="post" v-if="post.content_type_id == 9" />
     </div>
   </div>
 </template>
@@ -26,6 +27,7 @@ import AudioData from '@/components/AudioDataComponent.vue'
 import TextData from '@/components/TextDataComponent.vue'
 import PdfData from '@/components/PdfDataComponent.vue'
 import IframeData from '@/components/IframeDataComponent.vue'
+import ImageData from '@/components/ImageDataComponent.vue'
 
 export default {
   name: 'SectionShowView',
@@ -34,7 +36,8 @@ export default {
     AudioData,
     TextData,
     PdfData,
-    IframeData
+    IframeData,
+    ImageData
   },
   data() {
     return {

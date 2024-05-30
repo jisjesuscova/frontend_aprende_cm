@@ -20,6 +20,7 @@
           <CallButton :post="post" v-if="post.content_type_id == 6" />
           <ExternalPageButton :post="post" v-if="post.content_type_id == 7" />
           <AppButton :post="post" v-if="post.content_type_id == 8" />
+          <ContentShowButton :post="post" v-if="post.content_type_id == 9" />
           <div class="pt-5"></div>
         </div>
       </div>

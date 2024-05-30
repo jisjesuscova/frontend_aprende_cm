@@ -10,7 +10,7 @@
       </div>
     </div>
     <div v-else>
-      <img src="../assets/images/logo.jpg" alt="" class="mx-auto pt-2 logo" />
+      <img src="../assets/images/logo_frontend.png" alt="" class="mx-auto pt-2 logo" />
       <h1 class="text-center pb-2 pt-2 text-base font-bold">
         Haz click en los botones para ver cada contenido
       </h1>
@@ -67,7 +67,7 @@ export default {
         if (region_id != null && region_id != undefined && region_id != '') {
           this.region = region_id
         } else {
-          const response = await axios.post('/api/region/find')
+          const response = await axios.post('https://paneldecontrolaprende.cl/api/region/find')
 
           this.region = response.data.data.region_id
 
@@ -85,7 +85,7 @@ export default {
         if (commune_id != null && commune_id != undefined && commune_id != '') {
           this.commune = commune_id
         } else {
-          const response = await axios.post('/api/commune/find')
+          const response = await axios.post('https://paneldecontrolaprende.cl/api/commune/find')
 
           this.commune = response.data.data.commune_id
 
@@ -99,7 +99,7 @@ export default {
       this.loading = true
 
       try {
-        const response = await axios.get('https://paneldecontrolaprende.cl/api/front_section/'+this.region+'/'+this.commune, {
+        const response = await axios.post('https://paneldecontrolaprende.cl/api/front_section/'+this.region+'/'+this.commune, {
           headers: {
             accept: 'application/json'
           }

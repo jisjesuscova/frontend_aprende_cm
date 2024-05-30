@@ -5,7 +5,7 @@
       :to="`/category/show/${post.id}`"
       class="btn btn-block h-60 bg-blue-500 hover:bg-blue-600 text-white hover:text-white shadow-xl"
       :style="{ backgroundColor: post.color, boxShadow: '10px 10px 8px rgba(0, 0, 0, 0.3)' }"
-      @click="handleButtonClick(post.google_tag)"
+      @click="handleCallButtonClick(post.google_tag)"
     >
       <div class="flex flex-col w-full">
         <div
@@ -43,7 +43,7 @@ export default {
         return {}
     },
     methods: {
-      handleButtonClick(google_tag) {
+      handleCallButtonClick(google_tag) {
         this.$gtag.event('page_view', {
           page_title: google_tag
         });

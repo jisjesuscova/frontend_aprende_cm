@@ -20,6 +20,11 @@
     <h2 class="video_description mb-10">
       {{ post.video_description }}
     </h2>
+    <h2 class="whatsapp_share mt-10">Compartir mediante</h2>
+    <hr class="mb-2" />
+    <a :href="getWhatsAppShareLink(post.whatsapp_type_id, post.whatsapp_url)" target="_blank">
+      <i class="fa-brands fa-whatsapp whatsapp_button"></i>
+    </a>
   </div>
 </template>
 

@@ -50,12 +50,38 @@ export default {
     openApp(post, google_tag) {
       this.$gtag.event('page_view', {
         page_title: google_tag
-      });
-      
+      })
+
       if (this.isMobile()) {
         if (post.uri_app != null) {
+          setTimeout(function () {
+            if (
+              confirm(
+                'No tienes instalado la App o falta una actualización. ¿Deseas ir a Google Play?'
+              )
+            ) {
+              window.location.href = post.url_not_installed_app
+            }
+          }, 300)
+
+          // If "custom-uri://" is registered the app will launch immediately and your
+          // timer won't fire. If it's not set, you'll get an ugly "Cannot Open Page"
+          // dialogue prior to the App Store application launching
           window.location.href = post.uri_app
         } else {
+          setTimeout(function () {
+            if (
+              confirm(
+                'No tienes instalado la App o falta una actualización. ¿Deseas ir a Google Play?'
+              )
+            ) {
+              window.location.href = post.url_not_installed_app
+            }
+          }, 300)
+
+          // If "custom-uri://" is registered the app will launch immediately and your
+          // timer won't fire. If it's not set, you'll get an ugly "Cannot Open Page"
+          // dialogue prior to the App Store application launching
           window.location.href = post.url_app
         }
       } else {

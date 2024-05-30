@@ -3,7 +3,6 @@
     <div class="flex items-center justify-center h-screen">
       <div class="w-3/4">
         <img :src="`https://paneldecontrolaprende.cl/public/storage/${post.image}`" alt="">
-        <hr class="mt-5 mb-5">
       </div>
     </div>
   </div>

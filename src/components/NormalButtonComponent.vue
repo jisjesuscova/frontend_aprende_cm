@@ -2,10 +2,10 @@
   <div class="md:container md:mx-auto">
     <!-- Utiliza datos de 'post' para personalizar cada elemento -->
     <router-link
-      :to="`/content/show/${post.id}`"
+      :to="`/category/${post.id}`"
       class="btn btn-block h-60 bg-blue-500 hover:bg-blue-600 text-white hover:text-white shadow-xl"
       :style="{ backgroundColor: post.color, boxShadow: '10px 10px 8px rgba(0, 0, 0, 0.3)' }"
-      @click="handleCallButtonClick(post.google_tag)"
+      @click="handleButtonClick(post.google_tag)"
     >
       <div class="flex flex-col w-full">
         <div
@@ -18,10 +18,10 @@
           class="grid h-20 card bg-base-0 rounded-box place-items-center"
           v-if="post.icon_status_id == 1 && post.icon_type_id == 2 && post.icon != null"
         >
-          <img :src="`https://paneldecontrolaprende.cl/public/storage/${post.icon}`" alt="" class="h-24" />
+          <img :src="`https://paneldecontrolaprende.cl/storage/files/${post.icon}`" alt="" class="h-24" />
         </div>
         <div
-          class="grid h-20 card bg-base-0 rounded-box place-items-center font-bold button-title"
+          class="grid h-20 card bg-base-0 rounded-box place-items-center text-xl font-bold button-title"
         >
           {{ post.title }}
         </div>
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-    name: 'ContentShowButtonComponent',
+    name: 'NormalButtonComponent',
     props: {
         post: {
         type: Object,
@@ -43,7 +43,7 @@ export default {
         return {}
     },
     methods: {
-      handleCallButtonClick(google_tag) {
+      handleButtonClick(google_tag) {
         this.$gtag.event('page_view', {
           page_title: google_tag
         });

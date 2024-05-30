@@ -12,50 +12,32 @@ const router = createRouter({
     {
       path: '/',
       name: 'section_view',
-      component: SectionView,
-      meta: {
-        title: "Aprende Conecta Mayor - Secciones"
-      },
+      component: SectionView
     },
     {
       path: '/section/show/:id',
       name: 'section_show',
-      component: SectionShowView,
-      meta: {
-        title: "Aprende Conecta Mayor - Detalle de Sección"
-      },
+      component: SectionShowView
     },
     {
       path: '/category/:id',
       name: 'category',
-      component: CategoryView,
-      meta: {
-        title: "Aprende Conecta Mayor - Categorias"
-      },
+      component: CategoryView
     },
     {
       path: '/category/show/:id',
       name: 'category_show',
-      component: CategoryShowView,
-      meta: {
-        title: "Aprende Conecta Mayor - Detalle de Categoría"
-      },
+      component: CategoryShowView
     },
     {
       path: '/content/:section_id/:category_id',
       name: 'content',
-      component: ContentView,
-      meta: {
-        title: "Aprende Conecta Mayor - Contenido"
-      },
+      component: ContentView
     },
     {
       path: '/content/show/:id',
       name: 'content_show',
-      component: ContentShowView,
-      meta: {
-        title: "Aprende Conecta Mayor - Detalle de Contenido"
-      },
+      component: ContentShowView
     },
   ]
 })

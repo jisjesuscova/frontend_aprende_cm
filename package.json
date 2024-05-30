@@ -22,6 +22,7 @@
     "vue-gtag": "^2.0.1",
     "vue-play": "^3.2.1",
     "vue-router": "^4.0.13",
+    "vue-vimeo-player": "^1.1.2",
     "vue-youtube-embed": "^2.2.2",
     "vue3-youtube": "^0.1.9",
     "vue3-ytframe": "^0.4.0",

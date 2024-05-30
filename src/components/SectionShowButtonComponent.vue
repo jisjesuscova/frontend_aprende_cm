@@ -43,7 +43,7 @@ export default {
         return {}
     },
     methods: {
-      handleCallButtonClick(google_tag) {
+      handleButtonClick(google_tag) {
         this.$gtag.event('page_view', {
           page_title: google_tag
         });

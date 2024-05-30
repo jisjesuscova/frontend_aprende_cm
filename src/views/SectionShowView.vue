@@ -27,6 +27,7 @@ import AudioData from '@/components/AudioDataComponent.vue'
 import TextData from '@/components/TextDataComponent.vue'
 import PdfData from '@/components/PdfDataComponent.vue'
 import IframeData from '@/components/IframeDataComponent.vue'
+import ImageData from '@/components/ImageDataComponent.vue'
 
 export default {
   name: 'SectionShowView',
@@ -35,7 +36,8 @@ export default {
     AudioData,
     TextData,
     PdfData,
-    IframeData
+    IframeData,
+    ImageData
   },
   data() {
     return {
